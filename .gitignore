@@ -1,0 +1,14 @@
+*.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+.idea
+*.apk
+/app/release
+/app/sandbox
+/app/debug
+signing-configs.gradle

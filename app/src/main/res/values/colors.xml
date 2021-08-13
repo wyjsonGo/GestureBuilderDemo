@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="gesture_color">#FF0000</color>
+    <color name="gesture_create_draw_color">#FF0000</color>
+    <color name="gesture_discern_draw_color">#FF0000</color>
+    <color name="uncertain_gesture_discern_draw_color">#ffaa00</color>
+
+</resources>
