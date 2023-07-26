@@ -6,14 +6,17 @@ import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
 import android.gesture.GestureOverlayView;
 import android.gesture.Prediction;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
+
+import com.wyjson.bookhub.R;
 
 import java.util.List;
 
@@ -71,7 +74,6 @@ public class DiscernGestureActivity extends Activity {
                 Toast.makeText(DiscernGestureActivity.this, "完成?", Toast.LENGTH_SHORT).show();
             }
         });
-
         overlay.addOnGesturingListener(new GestureOverlayView.OnGesturingListener() {
             @Override
             public void onGesturingStarted(GestureOverlayView gestureOverlayView) {
@@ -80,6 +82,7 @@ public class DiscernGestureActivity extends Activity {
 
             @Override
             public void onGesturingEnded(GestureOverlayView overlay) {
+                Log.e("Wyjson", "onGestureEnded");
                 mGesture = overlay.getGesture();
                 if (mGesture.getLength() < CreateGestureActivity.LENGTH_THRESHOLD) {
                     overlay.clear(false);

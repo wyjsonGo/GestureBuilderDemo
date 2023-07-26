@@ -1,6 +1,9 @@
 package com.wyjson.gesturebuilderdemo;
 
 import android.app.AlertDialog;
+
+import com.wyjson.bookhub.R;
+
 import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
@@ -119,6 +122,7 @@ public class GestureBuilderActivity extends ListActivity {
     public void reloadGestures(View v) {
         loadGestures();
     }
+
     @SuppressWarnings({"UnusedDeclaration"})
     public void discernGestures(View v) {
         Intent intent = new Intent(this, DiscernGestureActivity.class);

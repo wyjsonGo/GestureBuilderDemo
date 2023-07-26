@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.wyjson.gesturebuilderdemo">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -16,7 +15,8 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name="GestureBuilderActivity"
+            android:name="com.wyjson.gesturebuilderdemo.GestureBuilderActivity"
+            android:exported="true"
             android:label="@string/application_name">
 
             <intent-filter>
@@ -29,11 +29,11 @@
         </activity>
 
         <activity
-            android:name="CreateGestureActivity"
+            android:name="com.wyjson.gesturebuilderdemo.CreateGestureActivity"
             android:label="@string/label_create_gesture" />
 
         <activity
-            android:name="DiscernGestureActivity"
+            android:name="com.wyjson.gesturebuilderdemo.DiscernGestureActivity"
             android:label="@string/label_discern_gesture" />
 
     </application>

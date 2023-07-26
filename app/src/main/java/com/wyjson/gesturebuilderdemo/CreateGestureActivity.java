@@ -1,5 +1,7 @@
 package com.wyjson.gesturebuilderdemo;
 
+import com.wyjson.bookhub.R;
+
 import android.app.Activity;
 import android.gesture.Gesture;
 import android.gesture.GestureLibrary;
