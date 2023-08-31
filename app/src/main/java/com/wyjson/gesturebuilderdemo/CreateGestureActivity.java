@@ -99,8 +99,8 @@ public class CreateGestureActivity extends Activity {
 
             setResult(RESULT_OK);
 
-            final String path = new File(Environment.getExternalStorageDirectory(),
-                    "gestures").getAbsolutePath();
+//            final String path = new File(Environment.getExternalStorageDirectory(), "gestures").getAbsolutePath();
+            final String path = new File(getExternalCacheDir().getAbsolutePath(), "gestures").getAbsolutePath();
             Toast.makeText(this, getString(R.string.save_success, path), Toast.LENGTH_LONG).show();
         } else {
             setResult(RESULT_CANCELED);

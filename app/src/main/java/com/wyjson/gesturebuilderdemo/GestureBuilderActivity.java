@@ -1,9 +1,6 @@
 package com.wyjson.gesturebuilderdemo;
 
 import android.app.AlertDialog;
-
-import com.wyjson.bookhub.R;
-
 import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
@@ -30,6 +27,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.wyjson.bookhub.R;
 
 import java.io.File;
 import java.util.Collections;
@@ -78,7 +77,7 @@ public class GestureBuilderActivity extends ListActivity {
     // Type: long (id)
     private static final String GESTURES_INFO_ID = "gestures.info_id";
 
-    private final File mStoreFile = new File(Environment.getExternalStorageDirectory(), "gestures");
+    private File mStoreFile = new File(Environment.getExternalStorageDirectory(), "gestures");
 
     private final Comparator<NamedGesture> mSorter = new Comparator<NamedGesture>() {
         public int compare(NamedGesture object1, NamedGesture object2) {
@@ -106,7 +105,9 @@ public class GestureBuilderActivity extends ListActivity {
         setListAdapter(mAdapter);
 
         if (sStore == null) {
+            mStoreFile = new File(getExternalCacheDir().getAbsolutePath(), "gestures");
             sStore = GestureLibraries.fromFile(mStoreFile);
+//            sStore = GestureLibraries.fromRawResource(this, R.raw.gestures);
         }
         mEmpty = (TextView) findViewById(android.R.id.empty);
         loadGestures();

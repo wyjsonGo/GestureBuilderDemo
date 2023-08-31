@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 
 import com.wyjson.bookhub.R;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -47,7 +48,8 @@ public class DiscernGestureActivity extends Activity {
         tvResult = findViewById(R.id.tv_result);
         tvResult.setMovementMethod(ScrollingMovementMethod.getInstance());
 
-        mGestureLibrary = GestureLibraries.fromRawResource(this, R.raw.gestures);
+//        mGestureLibrary = GestureLibraries.fromRawResource(this, R.raw.gestures);
+        mGestureLibrary = GestureLibraries.fromFile(new File(getExternalCacheDir().getAbsolutePath(), "gestures"));
         mGestureLibrary.load();
 
         GestureOverlayView overlay = (GestureOverlayView) findViewById(R.id.gestures_overlay);
